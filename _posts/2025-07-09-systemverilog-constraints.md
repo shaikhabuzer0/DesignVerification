@@ -1092,7 +1092,9 @@ write constraint to generate pattern 021346578
 46. {1010, 0101, 1100, 0011}  
 47. 0001, 0010, 0100, 1000  
 48. 1234, 2341, 3421, 4123  
-50. {% raw %} {{1,0,2,0,},{0,3,0,4},{5,0,6,0},{0,7,0,8}}  {% endraw %}
+```verilog
+50. {{1,0,2,0,},{0,3,0,4},{5,0,6,0},{0,7,0,8}}
+```
 51. constraint for 5*5 matrix such that last coloumn is sum of previous coloumns   
   
 ------------------array manipulator--------------  
