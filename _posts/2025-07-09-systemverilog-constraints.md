@@ -1021,6 +1021,7 @@ end
 endmodule
 
 ```
+```verilog
 1. Write constraint to generate 01010101 pattern, 11110000  
 x. Write constraint for power of 9 power of 3
 x. generate power of 2 without using power operator
@@ -1092,10 +1093,9 @@ write constraint to generate pattern 021346578
 46. {1010, 0101, 1100, 0011}  
 47. 0001, 0010, 0100, 1000  
 48. 1234, 2341, 3421, 4123  
-```verilog
 50. {{1,0,2,0,},{0,3,0,4},{5,0,6,0},{0,7,0,8}}
-```
 51. constraint for 5*5 matrix such that last coloumn is sum of previous coloumns   
   
 ------------------array manipulator--------------  
+```
   
