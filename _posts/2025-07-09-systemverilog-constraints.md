@@ -197,7 +197,7 @@ Q7. Generate 9 19 29 39 49 59 ...
  ```verilog
     constraint value_c{
             foreach(array[i])
-                array[i] == i*10+9;
+                array[i] == i*10+9;// adding 9 because our pattern starts from 9
     }
 ```
 Q8. 5 -10 15 -20 25 -30
@@ -207,10 +207,10 @@ Q8. 5 -10 15 -20 25 -30
         foreach(array[i])
             if(i%2==0)
                 //array[i] == -5*i; 
-                array[i] == (5*i)+5;//adding 1 as it is starting from 5 not from 0
+                array[i] == (5*i)+5;//adding 5 as it is starting from 5 not from 0
             else
-                //array[i] == -5*i;//adding 1 as it is starting from 5 not from 0
-                array[i] == -5*(i+1);//adding 1 as it is starting from 5 not from 0
+                //array[i] == -5*i;//
+                array[i] == -5*(i+1);//
             }
 ```
 
