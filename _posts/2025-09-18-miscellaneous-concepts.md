@@ -284,10 +284,11 @@ task run_phase(uvm_phase phase);
 apb_transaction expdata; //store the incoming pkt from monitor and check the results
 forever begin
   wait(exp_queue.size >0);
-  expdata = exp_queue.pop_front(); //extract first pkt and check
-  if(expdata.pwrite == 1)begin
-    mem[expdata.paddr] = expdata.pwdata;
-  end else if(expdata.pwrite == 0)begin
+  expdata = exp_queue.pop_front(); //extract first pkt and check and then check whether its write txn or read
+  if(expdata.pwrite == 1)begin // if its write txn then store inside local memory
+    mem[expdata.paddr] = expdata.pwdata; 
+  end else if(expdata.pwrite == 0)begin // if its read txn then compare it with local memory,
+//implement logic such that first it should check whether the requested addr is present inside local memory or not then only it should compare
     if(expdata.prdata != mem[expdata.paddr])begin
       `uvm_error("read data mismatch", UVM_NONE)
     end else begin
