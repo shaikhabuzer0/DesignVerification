@@ -240,7 +240,7 @@ Q10. 1.35 and 2.57
             $display("----------------------------------------------------------------------------");
         endfunction
 
-/* //for below code you have to randomize class multiple times to get the  results
+//for below code you have to randomize class multiple times to get the  results
 rand int a;
 real b;
 
