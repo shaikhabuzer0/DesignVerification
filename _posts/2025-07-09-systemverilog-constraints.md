@@ -282,7 +282,7 @@ function void post_randomize();
     foreach(array[i])begin
         if(i > 24 && i < 46 && i!=35)begin
             if(i%5==0 || i%9==0)begin
-                result[counter] = i;
+                result[counter] = i; // I think here it should be result[counter] = array[i];
                 counter++;
             end
 
@@ -363,7 +363,7 @@ constraint seven_ones_c{
 /*
 constraint ones_c{
  foreach(data[i]){
- if(i>0 && data[i] ==1)
+ if(i>0 && data[i] ==1 && i<999-7) 
   data[data[i]+:7] == 7'b1111111;
 }
 ;}
