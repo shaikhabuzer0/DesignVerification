@@ -37,18 +37,18 @@ write(2) // desired=2 mirrored=2 dut=2
 predict(3) // desire=3, mirrored=3, dut=2  
 mirror() // dut=2 != mirrored=3 throws error if UVM_CHECK is enable  
 ---------------------------------------------------------------------------------
-Building blocks of RAL model
-registers --> build with the help of uvm_reg class, it's job is to give register details with the help of configure method
-register block --> built using uvm_reg_block class, it's job is to give address mapping
-adapter block --> uvm_reg_adapter, it's job is to reg to bus txn and bus to reg txns
-predictore block --> uvm_reg_predictor use to capture response of dut and send to register model
-reg sequence --> uvm_sequence, which will have write, read, update etc methods
+Building blocks of RAL model  
+registers --> build with the help of uvm_reg class, it's job is to give register details with the help of configure method  
+register block --> built using uvm_reg_block class, it's job is to give address mapping  
+adapter block --> uvm_reg_adapter, it's job is to reg to bus txn and bus to reg txns  
+predictore block --> uvm_reg_predictor use to capture response of dut and send to register model  
+reg sequence --> uvm_sequence, which will have write, read, update etc methods  
 
 flow of the txn is given below  
-registers --> adapter --> sequencer --> driver --> interface --> DUT register
-DUT/register --> interface --> monitor --> predictor(adapter)--> register block
+registers --> adapter --> sequencer --> driver --> interface --> DUT register  
+DUT/register --> interface --> monitor --> predictor(adapter)--> register block  
 
-To model registers we have uvm_reg class, to model memories we have uvm_mem class  
+To model registers we have uvm_reg class, to model memories we have uvm_mem class   
 
 ## uvm_reg class(to model registers present inside dut)
 
